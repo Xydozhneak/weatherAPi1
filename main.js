@@ -30,7 +30,7 @@ function showWeather() {
           infoDiv.innerHTML = '';
           const card =   renderWeatherCard(data);
 
-          infoDiv.append(logo, card);
+          infoDiv.append(card);
            
         })
         .catch(error => {
