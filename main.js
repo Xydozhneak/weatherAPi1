@@ -22,7 +22,7 @@ function showWeather() {
     return fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityNow}&aqi=no`)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Ошибка получения данных о погоде');
+                throw new Error('ERROR', error);
             }
             return response.json();
         })
@@ -34,7 +34,7 @@ function showWeather() {
            
         })
         .catch(error => {
-            console.error("Ошибка при получении данных о погоде ", error);
+            console.error("ERROR", error);
         });
 }
 
@@ -47,7 +47,7 @@ function showForecast() {
     return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityNow}&days=${forecastDays}&aqi=no&alerts=no`)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Ошибка при получении прогноза погоды');
+                throw new Error('ERROR', error);
             }
             return response.json();
         })
@@ -65,7 +65,7 @@ function showForecast() {
             }
         })
         .catch(error => {
-            console.error("Ошибка при получении прогноза погоды ", error);
+            console.error("ERROR", error);
         });
 };
 
