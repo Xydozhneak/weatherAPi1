@@ -102,7 +102,7 @@ function renderWeatherCard(data) {
     mainCard.classList.add("mainCard");
    
     mainCard.append(date, city, currentTemperature, humidityElement, windSpeedElement, icon);
-    mainCard.before(tittle);
+
 
     return mainCard; 
 }

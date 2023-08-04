@@ -1,12 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono&display=swap');
-#infoDiv {
 
+
+
+@media (max-width: 767px) {
+  #infoDiv {
+
+    font-family: 'Montserrat', sans-serif;
+      border: 1px solid #ccc;
+      padding: 20px;
+  
+      border-radius: 5px;
+      display: flex;
+  
+      background-color: #77b6f1;
+      margin-right: 0;
+  
+    
+    }
+  
+   .body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    
+  
+   }
+  
+    
+  
+    #forecastDiv {
+      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+     flex-direction: column;
+      justify-content: center;
+  
+    }
+    
+    img {
+      display: block;
+      max-width: 50px;
+      max-height: 50px;
+      margin: 10px auto;
+    }
+    
+    button {
+      background-color: #2b5d2d;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+     
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .form {
+      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
+      background-size: cover;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: #77b6f1;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+  
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .form input{
+      font-family: 'Montserrat', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .form select{
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+   .form label{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+   }
+  
+  
+  
+    h1 {
+      text-align: center;
+    }
+    
+    #days {
+      margin-left: 5px;
+      font-size: 16px;
+    }
+    
+    #degree {
+      margin-left: 5px;
+    }
+    
+    .forecast-icon {
+      display: block;
+      max-width: 40px;
+      max-height: 40px;
+      margin: 5px auto;
+    }
+  .d-none{
+      display: none;
+  }  
+  .conteiner{
+    font-family: 'Montserrat', sans-serif;
+      border: 1px solid gray;
+      background-color: rgb(200, 244, 244);
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      border-radius: 5px;
+      padding: 20px;
+  }
+  .mainCard{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+  align-items: center;
+    width: 100%;
+  
+  }
+  .mainCard img{
+    margin: 0;
+  }
+  .mainCard div{
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+  }
+}
+
+
+#infoDiv {
+   
   font-family: 'Montserrat', sans-serif;
     border: 1px solid #ccc;
     padding: 20px;
 
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
 
     background-color: #77b6f1;
     margin-right: 0;
@@ -29,7 +183,9 @@
     padding: 20px;
     border-radius: 5px;
     display: flex;
+ 
     justify-content: center;
+   
 
   }
   
@@ -123,6 +279,7 @@
     justify-content: start;
     border-radius: 5px;
     padding: 20px;
+    margin-top: 10px;
 }
 .mainCard{
   font-family: 'Montserrat', sans-serif;
