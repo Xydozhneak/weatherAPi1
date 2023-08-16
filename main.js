@@ -37,6 +37,10 @@ function showWeather() {
             console.error("ERROR", error);
         });
 }
+cityInput.addEventListener('blur', () => {
+    
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1');
+  });
 
 function showForecast() {
     const cityNow = cityInput.value;
