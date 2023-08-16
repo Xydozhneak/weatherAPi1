@@ -1,5 +1,31 @@
-function addBirds(id){
-return(VANTA.BIRDS({
+// API key for weather data
+const apiKey = "2f2d8136d38e44b69a364511230208";
+
+// Selecting HTML elements
+const cityInput = document.querySelector("#city");
+const showButton = document.querySelector("#showButton");
+const infoDiv = document.querySelector("#infoDiv");
+infoDiv.classList.add("d-none");
+const degree = document.querySelector("#degree");
+const forecast = document.querySelector("#showForecast");
+const forecastDiv = document.querySelector("#forecastDiv");
+forecastDiv.classList.add("d-none");
+const days = document.querySelector("#days");
+const degreeSystem = document.querySelector("#degreeSystem");
+
+// Event listeners for user interactions
+days.addEventListener('change', showForecast);
+showButton.addEventListener('click', showWeather);
+forecast.addEventListener('change', showForecast);
+degree.addEventListener('change', showWeather);
+degree.addEventListener('change', () => {
+  showWeather();
+  showForecast();
+});
+
+// Function to initialize the VANTA.BIRDS animation
+function addBirds(id) {
+  return (VANTA.BIRDS({
     el: id,
     mouseControls: true,
     touchControls: true,
@@ -15,100 +41,93 @@ return(VANTA.BIRDS({
     birdSize: 2.00,
     speedLimit: 2.00,
     quantity: 3.00
-  })) 
+  }));
 }
+// Initialize birds animation for the form element
 addBirds('#form');
 
-  
-  const apiKey = "2f2d8136d38e44b69a364511230208";
-  const cityInput = document.querySelector("#city");
-  const showButton = document.querySelector("#showButton");
-  const infoDiv = document.querySelector("#infoDiv");
-  infoDiv.classList.add("d-none");
-  const degree = document.querySelector("#degree");
-  const forecast = document.querySelector("#showForecast");
-  const forecastDiv = document.querySelector("#forecastDiv");
-  forecastDiv.classList.add("d-none");
-  const days = document.querySelector("#days");
-  const degreeSystem = document.querySelector("#degreeSystem");
-  
-  days.addEventListener('change', showForecast);
-  showButton.addEventListener('click', showWeather);
-  forecast.addEventListener('change', showForecast);
-  degree.addEventListener('change', showWeather);
-  degree.addEventListener('change', () => {
-    showWeather();
-    showForecast();
-  });
-  
-  function showWeather() {
-    const cityNow = cityInput.value;
-    return fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityNow}&aqi=no`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('ERROR', error);
-        }
-        return response.json();
-      })
-      .then(data => {
-        infoDiv.innerHTML = '';
-        const card = renderWeatherCard(data);
-        card.classList.add("animate__animated");
-        card.classList.add("animate__backInLeft");
-        infoDiv.append(card);
-        addBirds('#infoDiv');
-        
-      })
-      .catch(error => {
-        console.error("ERROR", error);
-      });
+// Function to display current weather
+function showWeather() {
+  const cityNow = cityInput.value;
+  // Check if a city name is provided
+  if (!cityNow) {
+    alert("Please enter a city name.");
+    return;
   }
-  
-  cityInput.addEventListener('blur', () => {
-    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1');
-  });
-  
-  function showForecast() {
-    const cityNow = cityInput.value;
-    const forecastDays = parseInt(days.value);
-    const lableForecast = document.querySelector("#onForecast");
-  
-    let degreeType = '';
-    if (!degree.checked) {
-      degreeType = 'C';
-      degreeSystem.innerText = "Degree's system C";
-    } else {
-      degreeType = 'F';
-      degreeSystem.innerText = "Degree's system F";
-    }
-  
-    return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityNow}&days=${forecastDays}&aqi=no&alerts=no`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('ERROR', error);
-        }
-        return response.json();
-      })
-      .then(forecastData => {
-        if (forecast.checked) {
-          lableForecast.classList.add("addBorder");
-          forecastDiv.classList.remove("d-none");
-          forecastDiv.innerHTML = "";
-          for (let i = 0; i < forecastData.forecast.forecastday.length; i++) {
-            const forecastCard = renderForecastCard(forecastData, i);
-            forecastDiv.append(forecastCard);
-          }
+  return fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityNow}&aqi=no`)
+    .then(response => {
+      if (!response.ok) {
+        if (response.status === 400) {
+          alert("City not found. Please enter a valid city name.");
         } else {
-          lableForecast.classList.remove("addBorder");
-          forecastDiv.classList.add("d-none");
-          forecastDiv.innerHTML = "";
+          alert("An error occurred while fetching data.");
         }
-      })
-      .catch(error => {
-        console.error("ERROR", error);
-      });
+        throw new Error('ERROR', error);
+      }
+      return response.json();
+    })
+    .then(data => {
+      infoDiv.innerHTML = '';
+      const card = renderWeatherCard(data);
+      card.classList.add("animate__animated");
+      card.classList.add("animate__backInLeft");
+      infoDiv.append(card);
+      // Initialize birds animation for the infoDiv element
+      addBirds('#infoDiv');
+    })
+    .catch(error => {
+      console.error("ERROR", error);
+    });
+}
+
+// Listener for input blur event
+cityInput.addEventListener('blur', () => {
+  // Reset viewport settings to default on blur
+  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1');
+});
+
+// Function to display weather forecast
+function showForecast() {
+  const cityNow = cityInput.value;
+  const forecastDays = parseInt(days.value);
+  const lableForecast = document.querySelector("#onForecast");
+
+  let degreeType = '';
+  if (!degree.checked) {
+    degreeType = 'C';
+    degreeSystem.innerText = "Degree's system C";
+  } else {
+    degreeType = 'F';
+    degreeSystem.innerText = "Degree's system F";
   }
-  
+
+  return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityNow}&days=${forecastDays}&aqi=no&alerts=no`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('ERROR', error);
+      }
+      return response.json();
+    })
+    .then(forecastData => {
+      if (forecast.checked) {
+        lableForecast.classList.add("addBorder");
+        forecastDiv.classList.remove("d-none");
+        forecastDiv.innerHTML = "";
+        for (let i = 0; i < forecastData.forecast.forecastday.length; i++) {
+          const forecastCard = renderForecastCard(forecastData, i);
+          forecastDiv.append(forecastCard);
+        }
+      } else {
+        lableForecast.classList.remove("addBorder");
+        forecastDiv.classList.add("d-none");
+        forecastDiv.innerHTML = "";
+      }
+    })
+    .catch(error => {
+      console.error("ERROR", error);
+    });
+}
+  // Function to render the weather card
   function renderWeatherCard(data) {
     let degreeType = '';
     if (!degree.checked) {
@@ -149,7 +168,8 @@ addBirds('#form');
   
     return mainCard;
   }
-  
+
+  // Function to render the forecast card
   function renderForecastCard(forecastData, i) {
     let degreeType = '';
     !degree.checked ? degreeType = 'C' : degreeType = 'F';
