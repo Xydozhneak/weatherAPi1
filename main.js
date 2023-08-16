@@ -1,3 +1,22 @@
+VANTA.BIRDS({
+    el: "#form",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    backgroundColor: 0x85acd9,
+    color1: 0xffe100,
+    color2: 0x81b9ca,
+    colorMode: "variance",
+    birdSize: 2.00,
+    speedLimit: 2.00,
+    quantity: 3.00
+  })
+
+
 const apiKey = "2f2d8136d38e44b69a364511230208";
 const cityInput = document.querySelector("#city");
 const showButton = document.querySelector("#showButton");
@@ -30,8 +49,10 @@ function showWeather() {
         .then(data => {
           infoDiv.innerHTML = '';
           const card =   renderWeatherCard(data);
-
+          card.classList.add("animate__animated");
+          card.classList.add("animate__backInLeft");
           infoDiv.append(card);
+          
            
         })
         .catch(error => {
