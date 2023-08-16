@@ -8,6 +8,7 @@ const forecast = document.querySelector("#showForecast");
 const forecastDiv = document.querySelector("#forecastDiv");
 forecastDiv.classList.add("d-none");
 const days = document.querySelector("#days")
+const degreeSystem = document.querySelector("#degreeSystem");
 days.addEventListener('change',showForecast);
 showButton.addEventListener('click', showWeather);
 forecast.addEventListener('change',showForecast);
@@ -47,9 +48,15 @@ function showForecast() {
     const forecastDays = parseInt(days.value);
     const lableForecast = document.querySelector("#onForecast");
     
+    if(!degree.checked ) {
+        degreeType = 'C'
+        degreeSystem.innerText = "Degree's system C";
 
-    let degreeType = ''; 
-    !degree.checked ? degreeType = 'C': degreeType = 'F';
+    } else{
+        degreeType = 'F';
+        degreeSystem.innerText = "Degree's system F";
+
+} 
     
     return fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityNow}&days=${forecastDays}&aqi=no&alerts=no`)
         .then(response => {
@@ -81,7 +88,15 @@ function showForecast() {
 
 function renderWeatherCard(data) {
     let degreeType = '';
-    !degree.checked ? degreeType = 'C' : degreeType = 'F';
+    if(!degree.checked ) {
+        degreeType = 'C'
+        degreeSystem.innerText = "Degree's system C";
+
+    } else{
+        degreeType = 'F';
+        degreeSystem.innerText = "Degree's system F";
+
+}  
     const currentCity = data.location.name;
     const temperature = data.current[`temp_${degreeType.toLowerCase()}`];
     const humidity = data.current.humidity;
