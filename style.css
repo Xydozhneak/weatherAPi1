@@ -1,389 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono&display=swap');
-h1{
+
+h1 {
   color: #ffe0a7;
 }
-h2{
-  color:  #ffe0a7;
+
+h2 {
+  color: #ffe0a7;
 }
 
-#showForecast{
-  visibility: hidden;
-  
-}
-#degree{
+#showForecast {
   visibility: hidden;
 }
-.addBorder{
+
+#degree {
+  visibility: hidden;
+}
+
+.addBorder {
   border-bottom: 5px solid green;
-  
-
 }
+
 @media (min-width: 0px) and (max-width: 720px) {
-
   #infoDiv {
-
     font-family: 'Montserrat', sans-serif;
-      border: 1px solid #ccc;
-      padding: 0px;
-  
-      border-radius: 0px;
-      display: flex;
-  
-      background-color: #77b6f1;
-      margin-right: 0;
-  
-    
-    }
-  /* *{
-    border: 1px solid rgb(211, 17, 17);
-  } */
-   .body{
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    background-color: #85acd9;
+    margin-right: 0;
+  }
+
+  .body {
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-     margin: 0 auto;
-     
-    
-  
-   }
-  
-    
-  
-    #forecastDiv {
-      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
-      padding: 0px;
-      border-radius: 0px;
-      display: flex;
-     flex-direction: column;
-      justify-content: center;
-      align-items: center;
-     zoom: 0%;
-  
-    }
-    
-    img {
-      display: block;
-      max-width: 50px;
-      max-height: 50px;
-      margin: 10px auto;
-    }
-    
-    button {
-      background-color: #2b5d2d;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-     
-      font-size: 16px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    .form {
-     
-      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
-      background-size: cover;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #77b6f1;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-  
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
-    .form input{
-      font-family: 'Montserrat', sans-serif;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .form select{
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-   .form label{
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-   }
-  
-  
-  
-    h1 {
-      text-align: center;
-    }
-    
-    #days {
-      margin-left: 5px;
-      font-size: 16px;
-    }
-    
-    #degree {
-      margin-left: 5px;
-    }
-    
-    .forecast-icon {
-      display: block;
-      max-width: 40px;
-      max-height: 40px;
-      margin: 5px auto;
-    }
-  .d-none{
-      display: none;
-  }  
-  .conteiner{
-  
-    font-family: 'Montserrat', sans-serif;
-      border: 1px solid gray;
-      background-color: #77b6f1c2;
-      margin-left: 0px;
-      display: flex;
-      flex-direction: column;
-    
-      justify-content: center;
-      border-radius: 5px;
-      padding: 20px;
-      width: 70%;
-      margin-top: 20px;
+    margin: 0 auto;
   }
-  .conteiner p{
-    background-color: azure;
-    padding: 10px;
-  }
-   .mainCard{
-  
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 20px;
-  align-items: center;
-    width: 100%;
-  
-  }
-  .mainCard img{
-    margin: 0;
-  }
-  .mainCard div{
-    font-family: 'Montserrat', sans-serif;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: white;
-    width: 400px;
-    margin-top: 10px;
-    width: 70%;
-  }
-}
-@media (min-width: 767px) {
-  #infoDiv {
-
-    font-family: 'Montserrat', sans-serif;
-      border: 1px solid #ccc;
-      padding: 20px;
-  
-      border-radius: 5px;
-      display: flex;
-  
-      background-color: #77b6f1;
-      margin-right: 0;
-  
-    
-    }
-  
-   .body{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
-    
-  
-   }
-  
-    
-  
-    #forecastDiv {
-      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
-      padding: 20px;
-      border-radius: 5px;
-      display: flex;
-     flex-direction: column;
-      justify-content: center;
-  
-    }
-    
-    img {
-      display: block;
-      max-width: 50px;
-      max-height: 50px;
-      margin: 10px auto;
-    }
-    
-    button {
-      background-color: #2b5d2d;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-     
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    .form {
-      background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
-      background-size: cover;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #77b6f1;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-  
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
-    .form input{
-      font-family: 'Montserrat', sans-serif;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .form select{
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-   .form label{
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-   }
-  
-  
-  
-    h1 {
-      text-align: center;
-    }
-    
-    #days {
-      margin-left: 5px;
-      font-size: 16px;
-    }
-    
-    #degree {
-      margin-left: 5px;
-    }
-    
-    .forecast-icon {
-      display: block;
-      max-width: 40px;
-      max-height: 40px;
-      margin: 5px auto;
-    }
-  .d-none{
-      display: none;
-  }  
-  .conteiner{
-    font-family: 'Montserrat', sans-serif;
-      border: 1px solid gray;
-      background-color: #053a6b;
-      margin-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      border-radius: 5px;
-      padding: 20px;
-  }
-  .mainCard{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 20px;
-  align-items: center;
-    width: 100%;
-  
-  }
-  .mainCard img{
-    margin: 0;
-  }
-  .mainCard div{
-    font-family: 'Montserrat', sans-serif;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: white;
-  }
-}
-
-@media (min-width: 721px) and (max-width: 1920px){
-#infoDiv {
-   
-  font-family: 'Montserrat', sans-serif;
-    border: 1px solid #ccc;
-    padding: 20px;
-
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-
-    background-color: #77b6f1;
-    margin-right: 0;
-
-  
-  }
-
- .body{
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  
-
- }
-
-  
 
   #forecastDiv {
     background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
-    padding: 20px;
-    border-radius: 5px;
+    padding: 0;
+    border-radius: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-   
-
+    align-items: center;
+    zoom: 0%;
   }
-  
+
   img {
     display: block;
     max-width: 50px;
     max-height: 50px;
     margin: 10px auto;
   }
-  
+
   button {
     background-color: #2b5d2d;
     border: none;
@@ -391,13 +64,13 @@ h2{
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-   
     font-size: 16px;
-    margin: 4px 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
   }
-  
+
   .form {
     background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
     background-size: cover;
@@ -408,59 +81,352 @@ h2{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
     margin: 0;
   }
-  .form input{
+
+  .form input {
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
   }
-  .form select{
+
+  .form select {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
   }
- .form label{
-  background-color: aliceblue;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
- }
 
-
+  .form label {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 
   h1 {
     text-align: center;
   }
-  
+
   #days {
     margin-left: 5px;
     font-size: 16px;
   }
-  
+
   #degree {
     margin-left: 5px;
   }
-  
+
   .forecast-icon {
     display: block;
     max-width: 40px;
     max-height: 40px;
     margin: 5px auto;
   }
-.d-none{
+
+  .d-none {
     display: none;
-}  
-.conteiner{
-  font-family: 'Montserrat', sans-serif;
+  }
+
+  .conteiner {
+    font-family: 'Montserrat', sans-serif;
     border: 1px solid gray;
-    background-color: rgb(200, 244, 244);
+    background-color: #85acd9;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .conteiner p {
+    background-color: azure;
+    padding: 10px;
+  }
+
+  .mainCard {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mainCard img {
+    margin: 0;
+  }
+
+  .mainCard div {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    width: 400px;
+    margin-top: 10px;
+    width: 70%;
+  }
+}
+
+@media (min-width: 767px) {
+  #infoDiv {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    display: flex;
+    background-color: #85acd9;
+    margin-right: 0;
+  }
+
+  .body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  #forecastDiv {
+    padding: 20px;
+    background-color: #85acd9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #77b6f1;
+  }
+
+  img {
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 10px auto;
+  }
+
+  button {
+    background-color: #2b5d2d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .form {
+    background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #77b6f1;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .form input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .form select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .form label {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #days {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  #degree {
+    margin-left: 5px;
+  }
+
+  .forecast-icon {
+    display: block;
+    max-width: 40px;
+    max-height: 40px;
+    margin: 5px auto;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .conteiner {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    background-color: white;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .mainCard {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mainCard img {
+    margin: 0;
+  }
+
+  .mainCard div {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1920px) {
+  #infoDiv {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #85acd9;
+    margin-right: 0;
+  }
+
+  .body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+  }
+
+  #forecastDiv {
+    padding: 20px;
+    background-color: #85acd9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  img {
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 10px auto;
+  }
+
+  button {
+    background-color: #2b5d2d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .form {
+    background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #77b6f1;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .form input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .form select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .form label {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #days {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  #degree {
+    margin-left: 5px;
+  }
+
+  .forecast-icon {
+    display: block;
+    max-width: 40px;
+    max-height: 40px;
+    margin: 5px auto;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .conteiner {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    background-color: white;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -468,24 +434,26 @@ h2{
     border-radius: 5px;
     padding: 20px;
     margin-top: 10px;
-}
-.mainCard{
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
-align-items: center;
-  width: 100%;
+  }
 
-}
-.mainCard img{
-  margin: 0;
-}
-.mainCard div{
-  font-family: 'Montserrat', sans-serif;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: white;
-}
+  .mainCard {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mainCard img {
+    margin: 0;
+  }
+
+  .mainCard div {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+  }
 }
