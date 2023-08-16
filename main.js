@@ -41,6 +41,9 @@ function showWeather() {
 function showForecast() {
     const cityNow = cityInput.value;
     const forecastDays = parseInt(days.value);
+    const lableForecast = document.querySelector("#onForecast");
+    
+
     let degreeType = ''; 
     !degree.checked ? degreeType = 'C': degreeType = 'F';
     
@@ -53,6 +56,7 @@ function showForecast() {
         })
         .then(forecastData => {
             if (forecast.checked) {
+                lableForecast.classList.add("addBorder");
                 forecastDiv.classList.remove("d-none");
                 forecastDiv.innerHTML = "";
                 for (let i = 0; i < forecastData.forecast.forecastday.length; i++) {
@@ -60,6 +64,7 @@ function showForecast() {
                     forecastDiv.append(forecastCard);
                 }
             } else {
+                lableForecast.classList.remove("addBorder");
                 forecastDiv.classList.add("d-none");
                 forecastDiv.innerHTML = ""; 
             }

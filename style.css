@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono&display=swap');
 
+#showForecast{
+  visibility: hidden;
+  
+}
+#degree{
+  visibility: hidden;
+}
+.addBorder{
+  border-bottom: 5px solid green;
+  
+
+}
 @media (min-width: 0px) and (max-width: 720px) {
   #infoDiv {
 
@@ -39,6 +51,7 @@
       display: flex;
      flex-direction: column;
       justify-content: center;
+      align-items: center;
      
   
     }
@@ -129,12 +142,15 @@
     font-family: 'Montserrat', sans-serif;
       border: 1px solid gray;
       background-color: rgb(200, 244, 244);
-      margin-left: 20px;
+      margin-left: 0px;
       display: flex;
       flex-direction: column;
-      justify-content: start;
+    
+      justify-content: center;
       border-radius: 5px;
       padding: 20px;
+      width: 70%;
+      margin-top: 20px;
   }
   .mainCard{
   
@@ -157,6 +173,8 @@
     padding: 20px;
     background-color: white;
     width: 400px;
+    margin-top: 10px;
+    width: 70%;
   }
 }
 @media (min-width: 767px) {
@@ -341,7 +359,7 @@
     padding: 20px;
     border-radius: 5px;
     display: flex;
- 
+    flex-direction: row;
     justify-content: center;
    
 
