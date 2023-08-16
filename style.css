@@ -19,16 +19,14 @@ h2{
 
 }
 @media (min-width: 0px) and (max-width: 720px) {
-  .logo{
-    width: 300px;
-  }
+
   #infoDiv {
 
     font-family: 'Montserrat', sans-serif;
       border: 1px solid #ccc;
       padding: 0px;
   
-      border-radius: 5px;
+      border-radius: 0px;
       display: flex;
   
       background-color: #77b6f1;
@@ -56,7 +54,7 @@ h2{
     #forecastDiv {
       background-image: url(https://phonoteka.org/uploads/posts/2022-02/1645225276_9-phonoteka-org-p-fon-dlya-prezentatsii-pogoda-9.png);
       padding: 0px;
-      border-radius: 5px;
+      border-radius: 0px;
       display: flex;
      flex-direction: column;
       justify-content: center;
@@ -81,7 +79,8 @@ h2{
       text-decoration: none;
      
       font-size: 16px;
-      margin: 4px 2px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       cursor: pointer;
       border-radius: 5px;
     }
@@ -150,7 +149,7 @@ h2{
   
     font-family: 'Montserrat', sans-serif;
       border: 1px solid gray;
-      background-color: rgb(200, 244, 244);
+      background-color: #77b6f1c2;
       margin-left: 0px;
       display: flex;
       flex-direction: column;
@@ -161,7 +160,11 @@ h2{
       width: 70%;
       margin-top: 20px;
   }
-  .mainCard{
+  .conteiner p{
+    background-color: azure;
+    padding: 10px;
+  }
+   .mainCard{
   
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -306,7 +309,7 @@ h2{
   .conteiner{
     font-family: 'Montserrat', sans-serif;
       border: 1px solid gray;
-      background-color: rgb(200, 244, 244);
+      background-color: #053a6b;
       margin-left: 20px;
       display: flex;
       flex-direction: column;

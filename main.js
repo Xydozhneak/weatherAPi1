@@ -17,6 +17,7 @@ VANTA.BIRDS({
   })
 
 
+
 const apiKey = "2f2d8136d38e44b69a364511230208";
 const cityInput = document.querySelector("#city");
 const showButton = document.querySelector("#showButton");
@@ -183,6 +184,5 @@ function renderForecastCard(forecastData, i) {
     const forecastIcon = document.createElement("img");
     forecastIcon.src = weatherIcon;
     card.append(forecastDateEl,city, forecastTemperature, forecastWet, forecastWindSpeed,forecastIcon)
-
     return card;
 };
