@@ -37,6 +37,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    background-color: #77b6f1;
   }
 
   #forecastDiv {

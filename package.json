@@ -1,0 +1,72 @@
+{
+ 
+  "dependencies": {
+ 
+   
+  "three": "^0.155.0",
+ 
+   
+  "tree": "^0.1.3",
+ 
+   
+  "vanta": "^0.5.24"
+ 
+  },
+ 
+  "name": "watherapi",
+ 
+  "version": "1.0.0",
+ 
+  "description": "this weather api show my skills whith clean JS",
+ 
+  "main": "index.js",
+ 
+  "scripts": {
+ 
+   
+  "test": "echo \"Error: no test specified\" && exit 1",
+ 
+   
+  "build": "webpack --mode production",
+ 
+   
+  "dev": "webpack serve  --mode development"
+ 
+  },
+ 
+  "repository": {
+ 
+   
+  "type": "git",
+ 
+   
+  "url": "git+https://github.com/Xydozhneak/weatherAPi1.git"
+ 
+  },
+ 
+  "author": "Vitalii Bondarenko",
+ 
+  "license": "ISC",
+ 
+  "bugs": {
+ 
+   
+  "url": "https://github.com/Xydozhneak/weatherAPi1/issues"
+ 
+  },
+ 
+  "homepage": "https://github.com/Xydozhneak/weatherAPi1#readme",
+ 
+  "devDependencies": {
+ 
+   
+  "webpack": "^5.88.2",
+ 
+   
+  "webpack-cli": "^5.1.4",
+ 
+   
+  "webpack-dev-server": "^4.15.1"
+ 
+  }
+}
