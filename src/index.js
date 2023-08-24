@@ -16,7 +16,9 @@ import { addBirds } from './animation/birdsAnimation.js';
 
 // Event listeners for user interactions
 days.addEventListener('change', showForecast);
+showButton.href = "#infoDiv";
 showButton.addEventListener('click', showWeather);
+forecast.href = "#forecastDiv";
 forecast.addEventListener('change', showForecast);
 degree.addEventListener('change', showWeather);
 degree.addEventListener('change', () => {

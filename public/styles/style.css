@@ -21,6 +21,10 @@ h2 {
 }
 
 @media (min-width: 0px) and (max-width: 720px) {
+  body, html {
+    background-color: #85acd9;
+  }
+  
   #infoDiv {
     font-family: 'Montserrat', sans-serif;
     padding: 0;
